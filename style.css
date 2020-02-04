@@ -14,6 +14,8 @@ header {
     display: grid;
     grid-template-columns: 100px 1fr;
     grid-template-rows: 50px;
+    background-color: #fff;
+    z-index: 1;
 }
 .navs {
     display: none;
@@ -52,7 +54,7 @@ header {
     text-align: center;
     background: #fd3;
     padding: 8px;
-    font-size: 15px;
+    font-size: 13px;
 }
 
 @media screen and (min-width: 767px) {
@@ -142,4 +144,211 @@ header {
     }
 }
 /* end header */
-
+/* start banner */
+.banner {
+    margin: 0 10px;
+    padding-top: 83px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-rows: repeat(3, 270px);
+}
+.banner-story {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+.cover {
+    display: none;
+}
+.story-1 {
+    background-image: linear-gradient(rgba(182, 182, 34, 0.034), rgb(0, 0, 0)), url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/02/Poco-796x418.jpg);
+}
+.story-1:hover {
+    background-image: linear-gradient(rgba(182, 182, 34, 0.034), rgba(5, 5, 5, 0.541)), url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/02/Poco-796x418.jpg);
+}
+.story-2 {
+    background-image: linear-gradient(rgba(182, 182, 34, 0.034), rgb(0, 0, 0)), url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/11/Disney-Plus-796x417.jpg);
+}
+.story-2:hover {
+    background-image: linear-gradient(rgba(182, 182, 34, 0.034), rgba(5, 5, 5, 0.541)), url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/11/Disney-Plus-796x417.jpg);
+}
+.story-3 {
+    background-image: linear-gradient(rgba(124, 124, 88, 0.034), rgb(8, 8, 8)), url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/08/nasacolony-796x389.jpg);
+}
+.story-3:hover {
+    background-image: linear-gradient(rgba(124, 124, 88, 0.034), rgba(5, 5, 5, 0.541)), url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/08/nasacolony-796x389.jpg);
+}
+.story-title {
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.story-paragraph {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+.story-lists {
+    list-style: none;
+    display: flex;
+}
+.story-title, .story-lists, .story-paragraph {
+    padding: 0 0 10px 10px;
+}
+.story-lists li {
+    color: rgb(170, 169, 169);
+    font-size: 13px;
+    margin-right: 10px;
+}
+@media screen and (min-width: 767px) {
+    .banner {
+        padding-top: 3px;
+        grid-template: repeat(2, 280px) / 2fr 1fr;
+    }
+    .story-1 {
+        grid-row: 1 / -1;
+    }
+    .story-2 {
+        grid-row: 1 / 2;
+    }
+    .story-3 {
+        grid-column: 2 / -1;
+    }
+    .story-1 .story-paragraph {
+        font-size: 35px;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .cover {
+        display: block;
+        height: 100%;
+        background-image: linear-gradient(167deg, rgba(255,68,34,1) 33%, rgba(0,212,255,0) 68%);;
+        padding: 30px;
+    }
+    .cover img {
+        width: 60%;
+    }
+    .story-1 .story-paragraph {
+        font-size: 45px;
+    }
+    .story-2 .story-paragraph,.story-3 .story-paragraph {
+        font-size: 25px;
+    }
+}
+/* end banner */
+/* Start Section */
+main {
+    margin: 50px 20px;
+}
+.section-link {
+    text-decoration: none;
+    color: #f42;
+    font-size: 28px;
+    font-weight: 700;
+}
+.section-link:hover {
+    color: #000;
+}
+.latest-news {
+    display: grid;
+    margin-top: 20px;
+    grid-gap: 10px;
+}
+.news {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 90px auto;
+    grid-template-rows: repeat(3, 17px);
+}
+.image {
+    background-size: cover;
+    background-position: center;
+    grid-row: 1 / -1;
+    cursor: pointer;
+}
+.image-1 {
+    background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/02/Copy-of-Copy-of-Copy-of-Copy-of-...-516x270.png);
+}
+.image-2 {
+    background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/08/bitcoin_today-header_bitcoin_today-512x270.jpg);
+}
+.image-3 {
+    background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/10/Google-photos-514x270.jpg);
+}
+.image-4 {
+    background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/02/vq7rNd8-540x270.jpg);
+}
+.image-5 {
+    background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/07/petro-480x270.jpg);
+}
+.image-6 {
+    background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/08/bitcoin_today-header_bitcoin_today-512x270.jpg);
+}
+.image-7 {
+    background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/02/Garbage-badmouth-514x270.png);
+}
+.image-8 {
+    background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/08/bitcoin_today-header_bitcoin_today-512x270.jpg);
+}
+.news-title {
+    grid-row: 1 / 2;
+    font-weight: 800;
+    font-size: 13.5px;
+    cursor: pointer;
+}
+.news-title:hover {
+    color: #f42;
+    text-decoration: underline;
+}
+.news-author {
+    grid-column: 2 / -1;
+    color: grey;
+    font-size: 12.5px;
+}
+.image img {
+    width: 100%;
+}
+@media screen and (min-width: 767px) {
+    .latest-news {
+        grid-template-columns: repeat(3, 1fr);
+        grid-row-gap: 40px;
+    }
+    .news {
+        grid-template-columns: 1fr;
+        grid-template-rows: 140px;
+    }
+    .image {
+        grid-column: 1 / -1;
+        grid-row: unset;
+    }
+    .news-title {
+        grid-column: 1 / -1;
+        grid-row: unset;
+    }
+    .news-author {
+        grid-column: 1 / -1;
+        grid-row: unset;
+    }
+}
+@media screen and (min-width: 1024px) {
+    main {
+        padding: 0 10px;
+        width: 1024px;
+        margin: 70px auto;
+    }
+    .latest-news {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media screen and (min-width: 1200px) {
+    main {
+        width: 1200px;
+    }
+}
+/* End Section */
