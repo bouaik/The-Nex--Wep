@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body {
-    height: 4000px;
+    height: 15000px;
     font-family: Arial, Helvetica, sans-serif;
 }
 /* start header */
@@ -58,11 +58,11 @@ header {
 }
 
 @media screen and (min-width: 767px) {
-    ul {
+    header ul {
         list-style: none;
         display: flex;
     }
-    a {
+    header a {
         text-decoration: none;
     }
     header {
@@ -249,15 +249,15 @@ main {
 .section-link {
     text-decoration: none;
     color: #f42;
-    font-size: 28px;
-    font-weight: 700;
+    font-size: 26px;
+    font-weight: 800;
 }
 .section-link:hover {
     color: #000;
 }
 .latest-news {
     display: grid;
-    margin-top: 20px;
+    margin: 30px 0 60px 0;
     grid-gap: 10px;
 }
 .news {
@@ -351,4 +351,212 @@ main {
         width: 1200px;
     }
 }
+
+.title-lists {
+    list-style: none;
+}
+.title-lists li {
+    margin: 10px 0;
+}
+.title-lists li a {
+    text-decoration: none;
+    color: #f42;
+    font-size: 17px;
+}
+.title-lists li a:hover {
+    color: #000;
+}
+@media screen and (min-width: 767px) {
+    .title-lists {
+        display: flex;
+    }
+    .title-lists li {
+        padding: 0 10px;
+        border-left: 1px solid #f42;
+    }
+    .title-lists .first-list {
+        padding-left: 0;
+        border: 0vmax;
+    }
+
+}
+@media screen and (min-width: 1024px) {
+    .title-with-list {
+        display: flex;
+    }
+    .title-lists {
+        margin-left: auto;
+    }
+} 
+.latest-funding {
+    margin-top: 20px;
+}
+.box {
+    position: relative;
+}
+.hidden-box {
+    display: none;
+}
+.box img {
+    width: 60px;
+    position: absolute;
+    top: 13px;
+    left: 10px;
+}
+.box .box-title {
+    background: #f42;
+    padding: 10px 0 10px 80px;
+    color: #fff;
+    font-size: 17px;
+}
+.box .price {
+    background: rgba(255,68,34,.08);
+    padding: 17px 0 17px 80px;
+}
+.price .price-paragraph {
+    color: rgb(179, 178, 178);
+    text-transform: uppercase;
+    font-size: 12px;
+}
+.box .funding-lists {
+    list-style: none;
+    padding-left: 20px;
+}
+.funding-lists li {
+    margin: 10px 0;
+    padding: 5px 0;
+}
+.funding-lists .last-list {
+    border-top: 1px solid rgba(255, 67, 34, 0.555);
+    padding: 20px 0;
+}
+.funding-lists li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 13px;
+}
+.funding-lists .grey-span {
+    color: rgb(184, 179, 179);
+}
+.box .fas {
+    margin-right: 5px;
+}
+@media screen and (min-width: 767px) {
+    .latest-funding {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media screen and (min-width: 1024px) {
+    .hidden-box {
+        display: block;
+    }
+    .latest-funding {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+.articles {
+    margin-top: 50px;
+    display: grid;
+    grid-gap: 20px;
+}
+.article .article-title {
+    margin-bottom: 10px;
+}
+.article .article-cover {
+    background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/02/Poco-796x418.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 10px;
+}
+.article-cover .article-category {
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.article-cover .article-paragraph {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.article-cover .article-paragraph:hover {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: rgba(184, 177, 177, 0.644);
+}
+.article-cover .article-time {
+    font-size: 12px;
+    color: rgb(158, 154, 154);
+}
+.article .latest {
+    display: grid;
+    grid-template: 100px / auto 100px;
+    margin-top: 3px;
+    background: rgba(255,68,34,.08);
+}
+.article .latest-text {
+    align-self: center;
+    padding-left: 10px;
+    color: #f42;
+}
+.article .latest-word {
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+.article .letest-link {
+    color: #f42;
+    text-decoration: none;
+    font-weight: 700;
+}
+.article .letest-link:hover {
+    text-decoration: underline;
+}
+.article .latest-image {
+    background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/02/Whatsapp-bug-warning.jpg);
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+.article .article-lists {
+    padding-left: 20px;
+    list-style-image: #f42;
+    list-style: none;
+    margin-top: 10px;
+}
+.article-lists li::before {
+    content: "•"; color: #f42;
+    display: inline-block; width: 1em;
+    margin-left: -1em
+}
+.article-lists li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(85, 85, 85, 0.219);
+}
+.article-lists li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 13px;
+}
+@media screen and (min-width: 767px) {
+    .articles {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .article .article-cover {
+        height: 250px;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .articles {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 /* End Section */
