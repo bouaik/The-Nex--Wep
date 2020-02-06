@@ -1,0 +1,868 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* start header */
+header {
+  width: 100%;
+  position: fixed;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: 50px;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.navs {
+  display: none;
+}
+
+.logo {
+  display: flex;
+  cursor: pointer;
+}
+
+.logo-img {
+  background-image: linear-gradient(to right bottom, rgb(225, 0, 255), rgb(255, 115, 0));
+  width: 100%;
+  padding: 15px;
+}
+
+.icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.icons .fas {
+  font-size: 20px;
+  border-left: 1px solid rgba(165, 160, 160, 0.856);
+  cursor: pointer;
+  padding: 20px;
+}
+
+.icons .fa-search {
+  color: rgba(165, 160, 160, 0.856);
+}
+
+.icons .fa-search:hover {
+  color: rgba(70, 59, 59, 0.856);
+}
+
+.icons .fa-bars {
+  color: rgb(255, 60, 0);
+}
+
+.anounecement {
+  grid-column: 1 / -1;
+  text-align: center;
+  background: #fd3;
+  padding: 8px;
+  font-size: 13px;
+}
+
+@media screen and (min-width: 767px) {
+  header ul {
+    list-style: none;
+    display: flex;
+  }
+
+  header a {
+    text-decoration: none;
+  }
+
+  header {
+    position: relative;
+    grid-template-rows: 80px;
+  }
+
+  .icons {
+    display: none;
+  }
+
+  .navs {
+    display: block;
+  }
+
+  .top-nav {
+    display: flex;
+    height: 30px;
+    background: #000;
+    align-items: center;
+  }
+
+  .top-nav-right-lists {
+    margin-left: auto;
+    display: none;
+  }
+
+  .top-nav a {
+    color: rgb(177, 169, 169);
+    margin: 0 10px;
+    font-size: 13px;
+  }
+
+  .top-nav a:hover {
+    color: #fff;
+  }
+
+  .bottom-nav {
+    display: flex;
+    align-items: center;
+    height: 50px;
+  }
+
+  .botoom-nav-lists {
+    width: 100%;
+  }
+
+  .botoom-nav-lists li {
+    padding: 15px 0;
+  }
+
+  .search-icon {
+    margin-left: auto;
+    border-left: 1px solid rgba(165, 160, 160, 0.856);
+  }
+
+  .fa-search {
+    font-size: 20px;
+  }
+
+  .bottom-nav .bottom-nav-link {
+    color: rgb(170, 163, 163);
+    margin: 0 10px;
+    text-transform: uppercase;
+    font-size: 13px;
+  }
+
+  .bottom-nav .bottom-nav-link:hover {
+    color: #222;
+  }
+
+  .anounecement {
+    text-align: left;
+    padding-left: 110px;
+  }
+}
+
+@media screen and (min-width: 829px) {
+  .top-nav-right-lists {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .logo {
+    display: none;
+  }
+
+  .navs {
+    grid-column: 1 / -1;
+  }
+
+  .anounecement {
+    padding-left: 10px;
+  }
+}
+
+/* end header */
+
+/* start banner */
+.banner {
+  margin: 0 10px;
+  padding-top: 83px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-rows: repeat(3, 270px);
+}
+
+.banner-story {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+.cover {
+  display: none;
+}
+
+.story-1 {
+  background-image: linear-gradient(rgba(182, 182, 34, 0.034), rgb(0, 0, 0)), url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/02/Poco-796x418.jpg);
+}
+
+.story-1:hover {
+  background-image: linear-gradient(rgba(182, 182, 34, 0.034), rgba(5, 5, 5, 0.541)), url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/02/Poco-796x418.jpg);
+}
+
+.story-2 {
+  background-image: linear-gradient(rgba(182, 182, 34, 0.034), rgb(0, 0, 0)), url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/11/Disney-Plus-796x417.jpg);
+}
+
+.story-2:hover {
+  background-image: linear-gradient(rgba(182, 182, 34, 0.034), rgba(5, 5, 5, 0.541)), url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/11/Disney-Plus-796x417.jpg);
+}
+
+.story-3 {
+  background-image: linear-gradient(rgba(124, 124, 88, 0.034), rgb(8, 8, 8)), url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/08/nasacolony-796x389.jpg);
+}
+
+.story-3:hover {
+  background-image: linear-gradient(rgba(124, 124, 88, 0.034), rgba(5, 5, 5, 0.541)), url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/08/nasacolony-796x389.jpg);
+}
+
+.story-title {
+  color: #fff;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.story-paragraph {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.story-lists {
+  list-style: none;
+  display: flex;
+}
+
+.story-title,
+.story-lists,
+.story-paragraph {
+  padding: 0 0 10px 10px;
+}
+
+.story-lists li {
+  color: rgb(170, 169, 169);
+  font-size: 13px;
+  margin-right: 10px;
+}
+
+@media screen and (min-width: 767px) {
+  .banner {
+    padding-top: 3px;
+    grid-template: repeat(2, 280px) / 2fr 1fr;
+  }
+
+  .story-1 {
+    grid-row: 1 / -1;
+  }
+
+  .story-2 {
+    grid-row: 1 / 2;
+  }
+
+  .story-3 {
+    grid-column: 2 / -1;
+  }
+
+  .story-1 .story-paragraph {
+    font-size: 35px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .cover {
+    display: block;
+    height: 100%;
+    background-image: linear-gradient(167deg, rgba(255, 68, 34, 1) 33%, rgba(0, 212, 255, 0) 68%);
+    padding: 30px;
+  }
+
+  .cover img {
+    width: 60%;
+  }
+
+  .story-1 .story-paragraph {
+    font-size: 45px;
+  }
+
+  .story-2 .story-paragraph,
+  .story-3 .story-paragraph {
+    font-size: 25px;
+  }
+}
+
+/* end banner */
+
+/* Start Section */
+main {
+  margin: 50px 20px;
+}
+
+.section-link {
+  text-decoration: none;
+  color: #f42;
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.section-link:hover {
+  color: #000;
+}
+
+.latest-news {
+  display: grid;
+  margin: 30px 0 60px 0;
+  grid-gap: 10px;
+}
+
+.news {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 90px auto;
+  grid-template-rows: repeat(3, 17px);
+}
+
+.image {
+  background-size: cover;
+  background-position: center;
+  grid-row: 1 / -1;
+  cursor: pointer;
+}
+
+.image-1 {
+  background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/02/Copy-of-Copy-of-Copy-of-Copy-of-...-516x270.png);
+}
+
+.image-2 {
+  background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/08/bitcoin_today-header_bitcoin_today-512x270.jpg);
+}
+
+.image-3 {
+  background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/10/Google-photos-514x270.jpg);
+}
+
+.image-4 {
+  background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/02/vq7rNd8-540x270.jpg);
+}
+
+.image-5 {
+  background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/07/petro-480x270.jpg);
+}
+
+.image-6 {
+  background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/08/bitcoin_today-header_bitcoin_today-512x270.jpg);
+}
+
+.image-7 {
+  background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/02/Garbage-badmouth-514x270.png);
+}
+
+.image-8 {
+  background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/08/bitcoin_today-header_bitcoin_today-512x270.jpg);
+}
+
+.news-title {
+  grid-row: 1 / 2;
+  font-weight: 800;
+  font-size: 13.5px;
+  cursor: pointer;
+}
+
+.news-title:hover {
+  color: #f42;
+  text-decoration: underline;
+}
+
+.news-author {
+  grid-column: 2 / -1;
+  color: grey;
+  font-size: 12.5px;
+}
+
+.image img {
+  width: 100%;
+}
+
+@media screen and (min-width: 767px) {
+  .latest-news {
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 40px;
+  }
+
+  .news {
+    grid-template-columns: 1fr;
+    grid-template-rows: 140px;
+  }
+
+  .image {
+    grid-column: 1 / -1;
+    grid-row: unset;
+  }
+
+  .news-title {
+    grid-column: 1 / -1;
+    grid-row: unset;
+  }
+
+  .news-author {
+    grid-column: 1 / -1;
+    grid-row: unset;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  main {
+    padding: 0 10px;
+    width: 1024px;
+    margin: 70px auto;
+  }
+
+  .latest-news {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  main {
+    width: 1200px;
+  }
+}
+
+.title-lists {
+  list-style: none;
+}
+
+.title-lists li {
+  margin: 10px 0;
+}
+
+.title-lists li a {
+  text-decoration: none;
+  color: #f42;
+  font-size: 17px;
+}
+
+.title-lists li a:hover {
+  color: #000;
+}
+
+@media screen and (min-width: 767px) {
+  .title-lists {
+    display: flex;
+  }
+
+  .title-lists li {
+    padding: 0 10px;
+    border-left: 1px solid #f42;
+  }
+
+  .title-lists .first-list {
+    padding-left: 0;
+    border: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .title-with-list {
+    display: flex;
+  }
+
+  .title-lists {
+    margin-left: auto;
+  }
+}
+
+.latest-funding {
+  margin-top: 20px;
+}
+
+.box {
+  position: relative;
+}
+
+.hidden-box {
+  display: none;
+}
+
+.box img {
+  width: 60px;
+  position: absolute;
+  top: 13px;
+  left: 10px;
+}
+
+.box .box-title {
+  background: #f42;
+  padding: 10px 0 10px 80px;
+  color: #fff;
+  font-size: 17px;
+}
+
+.box .price {
+  background: rgba(255, 68, 34, 0.08);
+  padding: 17px 0 17px 80px;
+}
+
+.price .price-paragraph {
+  color: rgb(179, 178, 178);
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.box .funding-lists {
+  list-style: none;
+  padding-left: 20px;
+}
+
+.funding-lists li {
+  margin: 10px 0;
+  padding: 5px 0;
+}
+
+.funding-lists .last-list {
+  border-top: 1px solid rgba(255, 67, 34, 0.555);
+  padding: 20px 0;
+}
+
+.funding-lists li .funding-lists-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 13px;
+}
+
+.funding-lists .grey-span {
+  color: rgb(184, 179, 179);
+}
+
+.box .fas {
+  margin-right: 5px;
+}
+
+@media screen and (min-width: 767px) {
+  .latest-funding {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hidden-box {
+    display: block;
+  }
+
+  .latest-funding {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.articles {
+  margin-top: 50px;
+  display: grid;
+  grid-gap: 20px;
+}
+
+.article .article-title {
+  margin-bottom: 10px;
+}
+
+.article .article-cover {
+  background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/02/Poco-796x418.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.article-cover .article-category {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.article-cover .article-paragraph {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.article-cover .article-paragraph:hover {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-color: rgba(184, 177, 177, 0.644);
+}
+
+.article-cover .article-time {
+  font-size: 12px;
+  color: rgb(158, 154, 154);
+}
+
+.article .latest {
+  display: grid;
+  grid-template: 100px / auto 100px;
+  margin-top: 3px;
+  background: rgba(255, 68, 34, 0.08);
+  padding: 12px 0;
+}
+
+.article .latest-text {
+  align-self: center;
+  padding-left: 10px;
+  color: #f42;
+}
+
+.article .latest-word {
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-size: 13px;
+}
+
+.article .letest-link {
+  color: #f42;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.article .letest-link:hover {
+  text-decoration: underline;
+}
+
+.article .latest-image {
+  background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/02/Whatsapp-bug-warning.jpg);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+.article .article-lists {
+  padding-left: 20px;
+  list-style: none;
+  list-style: #f42;
+  margin-top: 10px;
+}
+
+.article-lists li::before {
+  content: "•";
+  color: #f42;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.article-lists li {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(85, 85, 85, 0.219);
+}
+
+.article-lists li .article-lists-link {
+  text-decoration: none;
+  color: #555;
+  font-size: 13px;
+}
+
+@media screen and (min-width: 332px) {
+  .article .latest-word {
+    font-size: 15px;
+  }
+
+  .article .letest-link {
+    font-size: 17px;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .articles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .article .article-cover {
+    height: 250px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .articles {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.deals-title {
+  margin-top: 50px;
+  display: flex;
+}
+
+.deals-see {
+  color: #f42;
+  margin-left: auto;
+  align-self: flex-end;
+  text-decoration: none;
+}
+
+.deals-see:hover {
+  color: #000;
+}
+
+.deals {
+  margin-top: 30px;
+  display: grid;
+  grid-gap: 15px;
+}
+
+.deals .deals-box {
+  display: grid;
+  grid-gap: 10px;
+  grid-template: 80px / 80px auto;
+}
+
+.deals .deals-image {
+  background-image: url(https://cdnp3.stackassets.com/0b442829152188ef5c1de0aff7d72820282f26e0/store/73b9b30bec03d67a0c89bae3aaaddafc5a59895b1edd5194d61ab010f926/sale_20564_primary_image.jpg);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+.deals .deals-paragraph {
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.deals .deals-paragraph:hover {
+  color: #f42;
+  text-decoration: underline;
+}
+
+.deals .deals-price {
+  margin-top: 10px;
+  font-weight: 100;
+  color: #222;
+}
+
+.deals .old-price {
+  font-size: 13px;
+  text-decoration: line-through;
+  color: grey;
+}
+
+@media screen and (min-width: 767px) {
+  .deals {
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 30px;
+  }
+
+  .deals .deals-box {
+    grid-template: 200px / 1fr;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .deals {
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 30px;
+  }
+}
+
+/* End Section */
+
+/* Start Social */
+.social {
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  flex-direction: column;
+  padding: 100px 0;
+}
+
+.social-icons,
+.social-list {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-icons li {
+  margin: 20px 8px 0 8px;
+}
+
+.social-icons li .social-icons-link {
+  font-size: 20px;
+  color: #fff;
+  background-color: #505050;
+  padding: 6px 8px;
+  border: 1.5px solid #505050;
+  border-radius: 50%;
+}
+
+.social-icons li .social-icons-link:hover {
+  background-color: #222;
+}
+
+.social-list {
+  margin-top: 30px;
+}
+
+.social-list li {
+  margin: 0 10px;
+}
+
+.social-list li .social-list-link {
+  color: #777;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.social-list li .social-list-link:hover {
+  color: #fff;
+}
+
+/* End Social */
+
+/* Start Footer */
+footer {
+  background-color: #000;
+  color: rgb(148, 148, 148);
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 15px;
+}
+
+footer .tnw {
+  width: 50px;
+  cursor: pointer;
+}
+
+footer .stack {
+  width: 80px;
+  cursor: pointer;
+}
+
+footer .heart {
+  color: #f42;
+}
+
+@media screen and (min-width: 767px) {
+  footer {
+    flex-direction: row;
+  }
+}
+
+/* End Footer */
