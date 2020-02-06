@@ -671,15 +671,17 @@ main {
   color: #555;
   font-size: 13px;
 }
+
 @media screen and (min-width: 332px) {
   .article .latest-word {
     font-size: 15px;
-
   }
+
   .article .letest-link {
     font-size: 17px;
   }
 }
+
 @media screen and (min-width: 767px) {
   .articles {
     grid-template-columns: repeat(2, 1fr);
